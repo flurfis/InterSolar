@@ -1,0 +1,28 @@
+micro controllre boards die spannung messen, send z.t. sehr ongnau
+wie schlächt esch de spanigsmäässer, wennmers meteme externe das dopplet kontroliere
+
+hauptuufgab "mässige", grafike erstelle, etc
+
+mehreri controller die es netzwerk vo loras uufbouet öber solar
+
+machts sinn sones system zbetriebe, ond wenn jo, wie betriibt mer das (Was bruucht mer för komponänte)
+
+
+
+https://circuitdigest.com/microcontroller-projects/raspberry-pi-with-lora-peer-to-peer-communication-with-arduino
+
+https://sunslice-solar.com/blogs/sunslice-blog-english/solar-panel-and-battery-calculation
+
+https://ch.rs-online.com/web/generalDisplay.html?id=ideen-und-tipps/mikrocontroller-leitfaden
+
+https://www.instructables.com/Solar-Powering-Microcontroller-Projects/
+
+
+
+Microcontroller AT89C2051 
+serial adc:ADC0831 - analog to digital converter (microcontroller monitors battery voltage with its help)
+lcd module - to read the status
+solar panel
+rechargeable battery
+charge control rl1 - keep current consupmtion of solar controller low ? gpt:  regulates the voltage and current coming from the solar panel and ensures that the battery is charged safely and efficiently.
+load control?
