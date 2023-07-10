@@ -64,7 +64,7 @@ def create_basic_plot(rp_data, mm_data, plotName):
     mm_s = mm_data[1]
     idx_mm = pd.Series(range(0, 5*mm_s.size, 5))
 
-    plt.plot(rp_data[8], label='Raspberry Py')
+    plt.plot(rp_data[8], label='Raspberry Pi')
     #plt.scatter(idx_mm, mm_s, c='red', s=15, label='Multimeter')
     plt.plot(idx_mm, mm_s, c='red', label='Multimeter')
 
@@ -126,8 +126,8 @@ def basic_plot_aufl(rp_data, mm_data, plotName):
     filter = rp_data[5]==15
     start_afer_hole = rp_data.where(filter, inplace=False)
 
-    plt.plot(rp_data[8], c='C0', label='Raspberry Py')
-    plt.plot(start_afer_hole[8], 'r1', markersize=6, c='fuchsia', label='Raspberry Py, Restart')
+    plt.plot(rp_data[8], c='C0', label='Raspberry Pi')
+    plt.plot(start_afer_hole[8], 'r1', markersize=6, c='fuchsia', label='Raspberry Pi, Restart')
     # plt.scatter(idx_mm, mm_s, c='red', s=15, label='Multimeter')
     plt.plot(idx_mm, mm_s, c='red', label='Multimeter')
 
