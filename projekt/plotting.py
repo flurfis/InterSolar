@@ -119,6 +119,28 @@ def time_diff_plot(rp_data, mm_data, plotName):
 
     #print("lslkdjf")
 
+def basic_plot_aufl(rp_data, mm_data, plotName):
+    mm_s = mm_data[1]
+    idx_mm = pd.Series(range(0, 5 * mm_s.size, 5))
+
+    filter = rp_data[5]==15
+    start_afer_hole = rp_data.where(filter, inplace=False)
+
+    plt.plot(rp_data[8], c='C0', label='Raspberry Py')
+    plt.plot(start_afer_hole[8], 'r1', markersize=6, c='fuchsia', label='Raspberry Py, Restart')
+    # plt.scatter(idx_mm, mm_s, c='red', s=15, label='Multimeter')
+    plt.plot(idx_mm, mm_s, c='red', label='Multimeter')
+
+    plt.xlabel("Zeit in Minuten")
+    plt.ylabel("Volt")
+    plt.legend(prop={'size': 6})
+    plt.title(plotName, fontweight="bold")
+    figname = "plots/" + plotName + ".png"
+    plt.savefig(figname)
+    plt.show()
+    lol = 2
+
+
 
 def read_data():
     #nm=normalmode, rp=raspberry py, mm=multimeter
@@ -170,6 +192,7 @@ def read_data():
     data_aufl_mm = pd.read_csv(path_aufl_mm, header=None, skiprows=[0])
     data_aufl_rp = pd.read_csv(path_aufl_rp, header=None)
     create_basic_plot(data_aufl_rp, data_aufl_mm, "Aufladen in der Sonne")
+    basic_plot_aufl(data_aufl_rp, data_aufl_mm, "Aufladen in der Sonne")
     #create_diff_plot(data_aufl_rp, data_aufl_mm, "Aufladen in der Sonne")
 
 
